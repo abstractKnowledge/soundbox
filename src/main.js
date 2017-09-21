@@ -1,10 +1,10 @@
-import { p } from './html-factory.js'
+import { h1 } from './html-factory.js'
 
 import './main.scss'
 
-const paragraph = p(
-  { class: 'hello' },
-  'hello world'
+const appTitle = h1(
+  { class: 'app-title' },
+  'Sound Box'
 )
 
-export default paragraph
+export default appTitle
