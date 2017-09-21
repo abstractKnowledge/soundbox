@@ -1,17 +1,17 @@
-const path = require("path")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const CopyWebpackPlugin = require("copy-webpack-plugin")
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const extractSass = new ExtractTextPlugin({
-  filename: "[name].css",
+  filename: '[name].css',
 })
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/app.js',
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -19,9 +19,9 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["env"],
+            presets: ['env'],
           },
         },
       },
@@ -30,27 +30,27 @@ module.exports = {
         use: extractSass.extract({
           use: [
             {
-              loader: "css-loader",
+              loader: 'css-loader',
             },
             {
-              loader: "sass-loader",
+              loader: 'sass-loader',
             },
           ],
-          fallback: "style-loader",
+          fallback: 'style-loader',
         }),
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.template.ejs",
-      inject: "body",
+      template: 'src/index.template.ejs',
+      inject: 'body',
     }),
     new CopyWebpackPlugin(
       [
         {
-          from: "src/images",
-          to: "images",
+          from: 'src/images',
+          to: 'images',
         },
       ],
       {}
