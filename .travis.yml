@@ -7,6 +7,7 @@ deploy:
   github_token: "$GITHUB_TOKEN"
   on:
     branch: master
+  local_dir: dist/
 script: npm run build
 env:
   matrix:
