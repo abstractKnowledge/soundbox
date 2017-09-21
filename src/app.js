@@ -1,5 +1,5 @@
-import hello from './hello'
+import main from './main'
 
 const appRoot = document.getElementById('app')
 
-appRoot.appendChild(hello)
+appRoot.appendChild(main)

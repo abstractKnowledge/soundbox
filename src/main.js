@@ -1,6 +1,6 @@
 import { p } from './html-factory.js'
 
-import './hello.scss'
+import './main.scss'
 
 const paragraph = p(
   { class: 'hello' },
