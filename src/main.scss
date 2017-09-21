@@ -1,14 +1,55 @@
 body {
-  background: #ccc;
+  background: #000;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 h1 {
   font-size: 3em;
   font-family: sans-serif;
   text-transform: uppercase;
+  margin: 0.5em 0;
 }
 
-.app-title {
-  color: orange;
-  text-shadow: 2px 1px #555;
+p {
+  line-height: 2;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 600px;
+
+  .app-header {
+    padding: 1em 2em;
+    background: #999;
+  }
+
+  .app-title {
+    color: orange;
+    text-shadow: 2px 1px #555;
+  }
+
+  .content {
+    background: #fff;
+    padding: 2em;
+  }
+
+  .app-footer {
+    text-align: right;
+    padding: 2em;
+    background: #999;
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .github-logo {
+      max-width: 100px;
+    }
+  }
 }
