@@ -45,7 +45,12 @@ const makeElementBuilder = type => (...args) => {
 
 export const p = makeElementBuilder('p')
 export const div = makeElementBuilder('div')
+export const h1 = makeElementBuilder('h1')
 export const h2 = makeElementBuilder('h2')
+export const h3 = makeElementBuilder('h3')
+export const h4 = makeElementBuilder('h4')
+export const h5 = makeElementBuilder('h5')
+export const h6 = makeElementBuilder('h6')
 export const img = makeElementBuilder('img')
 export const nav = makeElementBuilder('nav')
 export const ol = makeElementBuilder('ol')
