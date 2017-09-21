@@ -1,27 +1,8 @@
-import {
-  a,
-  h1,
-  div,
-  p,
-  span,
-  header,
-  footer,
-  img,
-} from './html-factory.js'
+import { div, p } from '../utils/html-factory.js'
 
-import './main.scss'
+import './app-content.scss'
 
-const appTitle = h1(
-  { class: 'app-title' },
-  'Sound Box'
-)
-
-const appHeader = header(
-  { class: 'app-header' },
-  [appTitle]
-)
-
-const content = div({ class: 'content' }, [
+const appContent = div({ class: 'app-content' }, [
   p(
     {},
     `
@@ -30,31 +11,4 @@ const content = div({ class: 'content' }, [
   ),
 ])
 
-const appFooter = footer(
-  { class: 'app-footer' },
-  [
-    a(
-      {
-        href:
-          'https://github.com/abstractKnowledge/soundbox',
-      },
-      [
-        p({}, 'Open Sourced on'),
-        img({
-          class: 'github-logo',
-          alt: 'github',
-          title: 'check out Sound Box on GitHub',
-          src: 'images/github-logo.png',
-        }),
-      ]
-    ),
-  ]
-)
-
-const main = div({ class: 'main' }, [
-  appHeader,
-  content,
-  appFooter,
-])
-
-export default main
+export default appContent

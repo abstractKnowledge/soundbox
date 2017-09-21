@@ -1,5 +1,5 @@
-import main from './main'
+import appMain from './components/app-main'
 
 const appRoot = document.getElementById('app')
 
-appRoot.appendChild(main)
+appRoot.appendChild(appMain)
