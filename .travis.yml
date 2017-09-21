@@ -7,6 +7,7 @@ deploy:
   github_token: "$GITHUB_TOKEN"
   on:
     branch: master
+script: npm run build
 env:
   matrix:
     secure: N69elG0m+2ysMqOsLziVx+HJpdUQAVG1sn20jSGrBleSAH5u3Q4iyVztFrDuIfkn5OCgEfAkMl97VDRibADyTDlhxmt/m+k5WxAEKc+cdulP6MwbsTkYh/pxSRumUXuWZvD6Dz5W9ExBkDRlqWwnMb6g9ZOONlo2lJmkt+9L8ZGuxKkLN+xl52AVcRCkD4PufSoooJr7L7ARSm+WpjXhbrd6DjOTYIYSD6pQLfw8HhD/pNlct+J37SYrU9Ys+VDBwbwg9HiWjIg3j+dtoVZ5HiXgPrgDCxVNsK6FOLZenMp6EOyVTgI/N7Q+6bISCNa9hxFnn87V2k3NxS02MFAW16aA7wQrrBL67rte7ckKo1xX9FFyZVRpywP7HDjGSbnUU9tjyzfkj9BYcwqaWCZVUBykbpI7Xo5NznX7Xbpw+c+fM3n+S+hhXKCMUdMfe3jL0llh4yL8cFxUx7siWMQ7cA2NMX1EkwxEWN/eVviMVQuziCAItnKFMhhHCPZNPL/MbaaSfOF1DK6LVCZOwZjaSO4Uff22kCv0L8nsLechjpWoET7MaykvmODJRNjCh06FAfUlsBmDVczBftteRAI35dMmLJmYEIs5tBgoiS08scfZ2iKj9tm/CHoMBgo1fAS+MdpRuuwoB3rurkheBTdHEB+zudZ4cDnt0JZ7RnZaOJU=
