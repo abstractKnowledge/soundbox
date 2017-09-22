@@ -1,8 +1,14 @@
 .file-drop-zone {
+  border: 4px dashed #555;
+
   .input-area label span,
   .uploading,
   .success,
   .error {
     display: none;
+  }
+
+  &.is-dragover {
+    background: #fee;
   }
 }

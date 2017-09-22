@@ -1,3 +1,5 @@
+import R from 'ramda'
+
 import {
   div,
   form,
@@ -13,6 +15,19 @@ import './file-drop-zone.scss'
 /**
  * Adapted from https://css-tricks.com/drag-and-drop-file-uploading/
  */
+
+const state = {
+  files: [],
+}
+const addFilesToState = files => {
+  state.files.push(...files)
+  R.forEach(
+    ({ name }) =>
+      console.log('added file:', name),
+    files
+  )
+  console.log('new "files" state:', state.files)
+}
 
 const inputArea = div({ class: 'input-area' }, [
   input({
@@ -57,5 +72,59 @@ const fileDropZone = form(
     ]),
   ]
 )
+
+const addEventHandler = (
+  element,
+  eventName,
+  handler
+) => {
+  element.addEventListener(eventName, handler)
+}
+
+const addEventHandlers = R.curry(
+  (element, eventNames, handler) => {
+    eventNames.forEach(eventName => {
+      addEventHandler(element, eventName, handler)
+    })
+  }
+)
+
+const addEventHandlersToDropZone = addEventHandlers(
+  fileDropZone
+)
+
+addEventHandlersToDropZone(
+  [
+    'drag',
+    'dragstart',
+    'dragend',
+    'dragover',
+    'dragenter',
+    'dragleave',
+    'drop',
+  ],
+  e => {
+    e.preventDefault()
+    e.stopPropagation()
+  }
+)
+
+addEventHandlersToDropZone(
+  ['dragover', 'dragenter'],
+  () => {
+    fileDropZone.classList.add('is-dragover')
+  }
+)
+
+addEventHandlersToDropZone(
+  ['dragleave', 'dragend', 'drop'],
+  () => {
+    fileDropZone.classList.remove('is-dragover')
+  }
+)
+
+addEventHandlersToDropZone(['drop'], e => {
+  addFilesToState(e.dataTransfer.files)
+})
 
 export default fileDropZone
