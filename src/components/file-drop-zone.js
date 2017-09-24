@@ -1,14 +1,6 @@
 import R from 'ramda'
 
-import {
-  div,
-  form,
-  input,
-  label,
-  strong,
-  button,
-  span,
-} from '../utils/html-factory.js'
+import $ from '../utils/html-factory.js'
 
 import './file-drop-zone.scss'
 
@@ -29,8 +21,8 @@ const addFilesToState = files => {
   console.log('new "files" state:', state.files)
 }
 
-const inputArea = div({ class: 'input-area' }, [
-  input({
+const inputArea = $.div({ class: 'input-area' }, [
+  $.input({
     type: 'file',
     name: 'files[]',
     id: 'file',
@@ -38,16 +30,16 @@ const inputArea = div({ class: 'input-area' }, [
       '{count} files selected',
     multiple: '',
   }),
-  label(
+  $.label(
     {
       for: 'file',
     },
     [
-      strong({}, 'Choose a File'),
-      span({}, ' or drag it here.'),
+      $.strong({}, 'Choose a File'),
+      $.span({}, ' or drag it here.'),
     ]
   ),
-  button(
+  $.button(
     {
       type: 'submit',
     },
@@ -55,7 +47,7 @@ const inputArea = div({ class: 'input-area' }, [
   ),
 ])
 
-const fileDropZone = form(
+const fileDropZone = $.form(
   {
     class: 'file-drop-zone',
     method: 'post',
@@ -64,11 +56,11 @@ const fileDropZone = form(
   },
   [
     inputArea,
-    div({ class: 'uploading' }, 'Uploading...'),
-    div({ class: 'success' }, 'Done!'),
-    div({ class: 'error' }, [
-      span({}, 'Error!'),
-      span({ class: 'error-content' }, []),
+    $.div({ class: 'uploading' }, 'Uploading...'),
+    $.div({ class: 'success' }, 'Done!'),
+    $.div({ class: 'error' }, [
+      $.span({}, 'Error!'),
+      $.span({ class: 'error-content' }, []),
     ]),
   ]
 )
