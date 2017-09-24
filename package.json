@@ -18,6 +18,9 @@
     ]
   },
   "license": "unlicensed",
+  "dependencies": {
+    "ramda": "^0.24.1"
+  },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
@@ -32,7 +35,6 @@
     "mocha": "^3.5.0",
     "node-sass": "^4.5.3",
     "prettier": "^1.5.3",
-    "ramda": "^0.24.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.4",
