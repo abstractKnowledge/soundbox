@@ -1,8 +1,7 @@
 # Soundbox
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/abstractKnowledge/soundbox.svg)](https://greenkeeper.io/)
-
 [![Build Status](https://travis-ci.org/abstractKnowledge/soundbox.svg?branch=master)](https://travis-ci.org/abstractKnowledge/soundbox)
+[![Greenkeeper badge](https://badges.greenkeeper.io/abstractKnowledge/soundbox.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## What is it?
