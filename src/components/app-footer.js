@@ -1,23 +1,18 @@
-import {
-  a,
-  p,
-  footer,
-  img,
-} from '../utils/html-factory.js'
+import $ from '../utils/html-factory.js'
 
 import './app-footer.scss'
 
-const appFooter = footer(
+const appFooter = $.footer(
   { class: 'app-footer' },
   [
-    a(
+    $.a(
       {
         href:
           'https://github.com/abstractKnowledge/soundbox',
       },
       [
-        p({}, 'Open Sourced on'),
-        img({
+        $.p({}, 'Open Sourced on'),
+        $.img({
           class: 'github-logo',
           alt: 'github',
           title: 'check out Sound Box on GitHub',

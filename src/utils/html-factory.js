@@ -43,24 +43,31 @@ const makeElementBuilder = type => (...args) => {
   return h(type, ...args)
 }
 
-export const p = makeElementBuilder('p')
-export const span = makeElementBuilder('span')
-export const strong = makeElementBuilder('strong')
-export const div = makeElementBuilder('div')
-export const h1 = makeElementBuilder('h1')
-export const h2 = makeElementBuilder('h2')
-export const h3 = makeElementBuilder('h3')
-export const h4 = makeElementBuilder('h4')
-export const h5 = makeElementBuilder('h5')
-export const h6 = makeElementBuilder('h6')
-export const img = makeElementBuilder('img')
-export const nav = makeElementBuilder('nav')
-export const ol = makeElementBuilder('ol')
-export const li = makeElementBuilder('li')
-export const a = makeElementBuilder('a')
-export const header = makeElementBuilder('header')
-export const footer = makeElementBuilder('footer')
-export const form = makeElementBuilder('form')
-export const input = makeElementBuilder('input')
-export const label = makeElementBuilder('label')
-export const button = makeElementBuilder('button')
+const elementBuilders = [
+  'p',
+  'span',
+  'strong',
+  'div',
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  'img',
+  'nav',
+  'ol',
+  'li',
+  'a',
+  'header',
+  'footer',
+  'form',
+  'input',
+  'label',
+  'button',
+].reduce((builderMap, tag) => {
+  builderMap[tag] = makeElementBuilder(tag)
+  return builderMap
+}, h)
+
+export default elementBuilders
