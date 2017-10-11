@@ -1,14 +1,6 @@
 import R from 'ramda'
 
-import $, {
-  div,
-  form,
-  input,
-  label,
-  strong,
-  button,
-  span,
-} from '../utils/html-factory.js'
+import $ from '../utils/html-factory.js'
 
 import './file-drop-zone.scss'
 
