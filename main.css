@@ -1,0 +1,46 @@
+.app-header {
+  padding: 1em 2em;
+  background: #999; }
+  .app-header .app-title {
+    color: orange;
+    text-shadow: 2px 1px #555; }
+.file-drop-zone {
+  border: 4px dashed #555; }
+  .file-drop-zone .input-area label span,
+  .file-drop-zone .uploading,
+  .file-drop-zone .success,
+  .file-drop-zone .error {
+    display: none; }
+  .file-drop-zone.is-dragover {
+    background: #fee; }
+.app-content {
+  background: #fff;
+  padding: 2em; }
+.app-footer {
+  text-align: right;
+  padding: 2em;
+  background: #999; }
+  .app-footer a {
+    text-decoration: none;
+    color: #000; }
+  .app-footer p {
+    margin: 0; }
+  .app-footer .github-logo {
+    max-width: 100px; }
+body {
+  background: #000;
+  box-sizing: border-box;
+  margin: 0; }
+
+h1 {
+  font-size: 3em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin: 0.5em 0; }
+
+p {
+  line-height: 2; }
+
+.app-main {
+  margin: 0 auto;
+  max-width: 600px; }
