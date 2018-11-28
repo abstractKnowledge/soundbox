@@ -19,7 +19,7 @@
   },
   "license": "unlicensed",
   "dependencies": {
-    "ramda": "^0.24.1"
+    "ramda": "^0.26.1"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
