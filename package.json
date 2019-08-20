@@ -35,7 +35,7 @@
     "mocha": "^3.5.0",
     "node-sass": "^4.5.3",
     "prettier": "^1.5.3",
-    "sass-loader": "^6.0.6",
+    "sass-loader": "^7.3.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.4",
     "webpack-dev-server": "^2.7.1"
